@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rentify</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="login">
+        <h2>Login / Register</h2>
+        <form id="login-form">
+          <input type="text" id="firstName" placeholder="First Name" required />
+          <input type="text" id="lastName" placeholder="Last Name" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <input type="text" id="phone" placeholder="Phone Number" required />
+          <button type="submit">Register</button>
+        </form>
+      </div>
+      <div id="seller-dashboard" style="display: none">
+        <h2>Seller Dashboard</h2>
+        <form id="property-form">
+          <input type="text" id="place" placeholder="Place" required />
+          <input type="text" id="area" placeholder="Area" required />
+          <input
+            type="number"
+            id="bedrooms"
+            placeholder="Number of Bedrooms"
+            required
+          />
+          <input
+            type="number"
+            id="bathrooms"
+            placeholder="Number of Bathrooms"
+            required
+          />
+          <input
+            type="text"
+            id="nearby"
+            placeholder="Hospitals & Colleges Nearby"
+            required
+          />
+          <button type="submit">Post Property</button>
+        </form>
+        <h3>My Properties</h3>
+        <ul id="property-list"></ul>
+      </div>
+      <div id="buyer-dashboard" style="display: none">
+        <h2>Available Properties</h2>
+        <div id="filter">
+          <input type="text" id="filter-place" placeholder="Place" />
+          <input type="number" id="filter-bedrooms" placeholder="Bedrooms" />
+          <button id="apply-filter">Apply Filter</button>
+        </div>
+        <ul id="property-list-buyer"></ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
